@@ -1,0 +1,24 @@
+
+int sqrtN(long long int N)
+{
+    // Write your code here.x
+	long long int mid;
+	int s=0,e=N,ans;
+	while(s<=e)
+	{
+		mid=s+(e-s)/2;
+		long long int square=mid*mid;
+		if(square==N)
+			return mid;
+		if(square>N)
+		{
+			e=mid-1;
+		}
+		else
+		{
+			ans=mid;
+			s=mid+1;
+		}
+	}
+	return ans;
+}
